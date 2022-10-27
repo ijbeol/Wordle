@@ -11,6 +11,8 @@ How to play:
 Wordle selects a random five letter (english) word from gave.txt. It's your mission to guess the word! After guessing, you'll be given a response: A white square indicates that the letter in this position is wrong. A yellow square indicates that the letter in this position is part of the word, however in the wrong position. A green square indicates that your letter is both in the word, and in the correct position.
 
 Good luck!
+
+I want to thank my mentor @mathiasbreistein, as well as my assistants @salihasajid and @redzarosli.
 <!--
 **ijbeol/ijbeol** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
