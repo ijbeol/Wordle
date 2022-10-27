@@ -1,4 +1,5 @@
 import random
+from tkinter.font import BOLD
 lines = open('gave.txt').read().splitlines()
 myline = random.choice(lines)
 answer = myline.lower()
@@ -8,8 +9,34 @@ roundNumber = 0
 result = ''
 feedback = ['O', 'O', 'O', 'O', 'O']
 previousGuesses = list()
+keyboardTopTuple = ('q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p')
+keyboardMidTuple = ('a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l')
+keyboardBottomTuple = ('z', 'x', 'c', 'v', 'b', 'n', 'm')
+keyboardTopList = list(keyboardTopTuple)
+keyboardMidList = list(keyboardMidTuple)
+keyboardBottomList = list(keyboardBottomTuple)
+pointlessCounter = 0
 while True:
     guess = input('Guess a word: ').lower()
+    for l in guess:
+        for num in range(0, len(keyboardTopList)):
+            if l == keyboardTopList[num]:
+                if l in answer:
+                    pointlessCounter +=1
+                else:
+                    keyboardTopList[num] = '☠️ '
+        for num in range(0, len(keyboardMidList)):
+            if l == keyboardMidList[num]:
+                if l in answer:
+                    pointlessCounter +=1
+                else:
+                    keyboardMidList[num] = '☠️ '
+        for num in range(0, len(keyboardBottomList)):
+            if l == keyboardBottomList[num]:
+                if l in answer:
+                    pointlessCounter +=1
+                else:
+                    keyboardBottomList[num] = '☠️ '
     if len(guess) != 5:
         print('Please use a five letter word..')
     elif guess not in lines:
@@ -35,6 +62,8 @@ while True:
                 counter += 1
             result = "".join(result) + "".join(feedback) + str('\n')
             print(result)
+            keyboard = " ".join(keyboardTopList) + str('\n') + " ".join(keyboardMidList) + str('\n') + " ".join(keyboardBottomList)
+            print(keyboard)
             roundNumber += 1
     print('You have used {} out of 6 attempts!'.format(roundNumber))
     counter = 0
