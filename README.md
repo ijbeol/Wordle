@@ -2,6 +2,8 @@
 
 Enjoy my wordle game
 
+![image](https://user-images.githubusercontent.com/67274780/198236927-a0867940-f9b7-473c-8114-97de11b4181d.png)
+
 <!--
 **ijbeol/ijbeol** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
