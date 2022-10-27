@@ -1,5 +1,4 @@
 import random
-from tkinter.font import BOLD
 lines = open('gave.txt').read().splitlines()
 myline = random.choice(lines)
 answer = myline.lower()
