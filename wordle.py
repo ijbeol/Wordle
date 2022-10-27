@@ -1,8 +1,20 @@
 import random
-lines = open('gave.txt').read().splitlines()
+levelInput = input('Hi! Welcome to Wordle. Before we start, please select a difficulty between 1 and 3. \nTips: Level 1 is nouns and pronouns. \nLevel 2 is the above plus verbs, adjectives, conjunctions and adverbs. \nOh, and level 3 is a secret..\n \nSo, what level do you choose? ')
+level = int(levelInput)
+while level not in range(1, 4):
+    print('I see numbers are difficult for you. Try again by pressing the button with the number 1, 2 or 3 on it (hint: top left corner of your keyboard)')
+    levelInput = input('Hi! Welcome to Wordle. Please select a difficulty between 1 and 3: ')
+    level = int(levelInput)
+if level == 1:
+    levelLines = open('gave1.txt').read().splitlines()
+elif level == 2:
+    levelLines = open('gave2.txt').read().splitlines()
+else:
+    levelLines = open('gave3.txt').read().splitlines()
+lines = levelLines
 myline = random.choice(lines)
 answer = myline.lower()
-y = 1
+print(answer)
 counter = 0
 roundNumber = 0
 result = ''
