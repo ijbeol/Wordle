@@ -14,7 +14,6 @@ else:
 lines = levelLines
 myline = random.choice(lines)
 answer = myline.lower()
-print(answer)
 counter = 0
 roundNumber = 0
 result = ''
