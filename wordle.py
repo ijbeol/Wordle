@@ -59,6 +59,8 @@ while True:
                 feedback = ['🟩', '🟩', '🟩', '🟩', '🟩']
                 result = "".join(result) + "".join(feedback) + str('\n')
                 print(result)
+                if roundNumber == 0:
+                    print('You are one of the smartest creatures amongst God and Pedro Lindeza.')
                 break
         else:
             for letter in guess:
